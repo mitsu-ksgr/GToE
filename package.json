@@ -3,5 +3,11 @@
     "version": "0.1.0",
     "description": "GToE is an application that just display the google translate page.",
     "main": "main.js",
-    "author": "mitsu-ksgr"
+    "author": "mitsu-ksgr <mitsu.naka.dev@gmail.com>",
+    "homepage": "https://github.com/mitsu-ksgr/GToE",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/mitsu-ksgr/GToE.git"
+    },
+    "license": "MIT"
 }
