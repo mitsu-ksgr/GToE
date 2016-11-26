@@ -19,52 +19,59 @@ function setupMenu()
 {
     Menu.setApplicationMenu(Menu.buildFromTemplate([
         {
-            label: "GToE",
+            label: 'GToE',
             submenu: [
-                {
-                    label: "About GToE",
-                    selector: "orderFrontStandardAboutPanel:"
-                },
+                { role: 'about' },
+                { type: 'separator' },
+                { role: 'hide' },
+                { role: 'hideothers' },
+                { role: 'unhide' },
                 { type: "separator" },
-                {
-                    label: "Quit",
-                    accelerator: "Command+Q",
-                    click: function() { app.quit(); }
-                }
+                { role: 'quit' }
             ]
         },
         {
-            label: "Edit",
+            label: 'Edit',
+            submenu: [
+                { role: 'undo' },
+                { role: 'redo' },
+                { type: "separator" },
+                { role: 'cut' },
+                { role: 'copy' },
+                { role: 'paste' },
+                { role: 'pasteandmatchstyle' },
+                { role: 'delete' },
+                { role: 'selectall' }
+            ]
+        },
+        {
+            label: 'View',
+            submenu: [
+                { role: 'reload' },
+                { role: 'toggledevtools' },
+                { type: 'separator' },
+                { role: 'resetzoom' },
+                { role: 'zoomin' },
+                { role: 'zoomout' },
+                { type: 'separator' },
+                { role: 'togglefullscreen' }
+            ]
+        },
+        {
+            label: 'Window',
+            submenu: [
+                { role: 'minimize' },
+                { role: 'close' }
+            ]
+        },
+        {
+            label: 'Help',
             submenu: [
                 {
-                    label: "Undo",
-                    accelerator: "CmdOrCtrl+Z",
-                    selector: "undo:" },
-                {
-                    label: "Redo",
-                    accelerator: "Shift+CmdOrCtrl+Z",
-                    selector: "redo:"
-                },
-                { type: "separator" },
-                {
-                    label: "Cut",
-                    accelerator: "CmdOrCtrl+X",
-                    selector: "cut:"
-                },
-                {
-                    label: "Copy",
-                    accelerator: "CmdOrCtrl+C",
-                    selector: "copy:"
-                },
-                {
-                    label: "Paste",
-                    accelerator: "CmdOrCtrl+V",
-                    selector: "paste:"
-                },
-                {
-                    label: "Select All",
-                    accelerator: "CmdOrCtrl+A",
-                    selector: "selectAll:"
+                    label: 'Get sources',
+                    click: function() {
+                        require('electron').shell.openExternal('https://github.com/mitsu-ksgr/GToE');
+                    }
                 }
             ]
         }
