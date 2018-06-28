@@ -3,11 +3,15 @@
 //-----------------------------------------------------------------------------
 const {app, BrowserWindow, Menu} = require('electron');
 const TARGET_URL = 'https://translate.google.com/';
+const path = require('path');
 
 let win = null;    //! Browser Window object.
 function createWindow()
 {
-    win = new BrowserWindow({width: 1080, height: 800});
+    win = new BrowserWindow({
+        width: 1080, height: 800,
+        icon: path.join(__dirname, 'images/gtoe.iconset/icon_32x32@2x.png')
+    });
     win.loadURL(TARGET_URL);
 
     win.on('closed', () => {

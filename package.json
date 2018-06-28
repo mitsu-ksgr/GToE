@@ -9,5 +9,9 @@
         "type": "git",
         "url": "https://github.com/mitsu-ksgr/GToE.git"
     },
-    "license": "MIT"
+    "license": "MIT",
+    "dependencies": {
+        "electron-packager": "^11.1.0"
+    }
 }
+
